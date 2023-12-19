@@ -140,6 +140,7 @@ async function bootstrap() {
     const globalPrefix = 'api';
     app.setGlobalPrefix(globalPrefix);
     const port = process.env.PORT || 3000;
+    process.env.node_env !== 'production' && app.enableCors();
     await app.listen(port);
     common_1.Logger.log(`🚀 Application is running on: http://localhost:${port}/${globalPrefix}`);
 }
