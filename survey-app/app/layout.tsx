@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="ru">
-            <body>
+            <body className="body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0">
                 <Providers>{children}</Providers>
             </body>
         </html>
